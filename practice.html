@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Parvati Guide — Practice</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body class="font-[Inter] bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+  <header class="sticky top-0 z-20 bg-white/80 dark:bg-slate-900/70 backdrop-blur border-b border-slate-200/70 dark:border-slate-800/80">
+    <nav class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="brand">Practice: Quick Match</a>
+
+      <div class="hidden md:flex items-center gap-2">
+        <a class="chip" href="index.html">Suprabhatham</a>
+        <a class="chip" href="cues.html">Cues</a>
+        <a class="chip chip--active" href="practice.html">Practice</a>
+        <button id="themeToggle" class="chip">🌗</button>
+      </div>
+
+      <button id="menuToggle" class="md:hidden chip" aria-controls="mobileMenu" aria-expanded="false">☰</button>
+    </nav>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200/70 dark:border-slate-800/80 bg-white/90 dark:bg-slate-900/80 backdrop-blur">
+      <div class="mx-auto max-w-6xl px-4 py-3 flex flex-col gap-2">
+        <a class="chip" href="index.html">Suprabhatham</a>
+        <a class="chip" href="cues.html">Cues</a>
+        <a class="chip chip--active" href="practice.html">Practice</a>
+        <button id="themeToggleMobile" class="chip text-left">🌗 Dark Mode</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 py-6">
+    <section class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
+      <button data-mode="beginner" class="mode chip w-full">Beginner (10s)</button>
+      <button data-mode="pro" class="mode chip w-full">Pro (5s)</button>
+      <button data-mode="rapid" class="mode chip chip--primary w-full">Rapid (3s)</button>
+    </section>
+
+    <section id="card" class="rounded-xl border border-slate-200/70 dark:border-slate-800/80 bg-white/80 dark:bg-slate-900/60 backdrop-blur p-6">
+      <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">Identify the healthy response as fast as possible.</div>
+      <div id="cue" class="text-2xl font-semibold mb-1">—</div>
+      <div id="meaning" class="text-slate-500 dark:text-slate-400 mb-6">—</div>
+
+      <div id="options" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
+
+      <div class="mt-6 flex flex-wrap items-center gap-4 text-sm">
+        <div>⏱️ <span id="timer">0.00s</span></div>
+        <div>✅ Acc: <span id="acc">0/0</span></div>
+        <div>🔥 Streak: <span id="streak">0</span></div>
+        <button id="next" class="chip ms-auto">Skip →</button>
+        <button id="end" class="chip">End Session</button>
+      </div>
+    </section>
+
+    <section id="summary" class="hidden mt-6 rounded-xl border border-slate-200/70 dark:border-slate-800/80 bg-white/80 dark:bg-slate-900/60 backdrop-blur p-6">
+      <h2 class="text-xl font-bold mb-2">Session Summary</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
+        <div class="stat">Avg Time: <span id="avg">0.00s</span></div>
+        <div class="stat">Accuracy: <span id="acc2">0%</span></div>
+        <div class="stat">Longest Streak: <span id="best">0</span></div>
+      </div>
+      <h3 class="font-semibold mb-1">Most-missed cues</h3>
+      <ul id="missed" class="list-disc ps-6 text-slate-600 dark:text-slate-300"></ul>
+      <div class="mt-4 flex gap-3">
+        <button id="restart" class="chip chip--primary">Restart</button>
+        <a href="cues.html" class="chip">Revisit Cues</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/theme.js"></script>
+  <script src="assets/nav.js"></script>
+  <script src="assets/practice.js"></script>
+</body>
+</html>

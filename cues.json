@@ -1,0 +1,13 @@
+[
+  {"id":"glance_down","cue":"Brief glance then looking down","icon":"👀","meaning":"Shy interest; wants you to initiate gently","response":"Smile, move a little closer, speak softly","category":"affection"},
+  {"id":"public_touch","cue":"Light touch on your arm in public","icon":"🤝","meaning":"Seeks shared acknowledgement","response":"Touch back lightly; make eye contact and smile","category":"connection"},
+  {"id":"hair_play","cue":"Playing with hair or jewelry while talking","icon":"💇‍♀️","meaning":"Wants admiration and attention","response":"Offer a specific, sincere compliment","category":"affirmation"},
+  {"id":"steps_closer","cue":"Stepping closer while speaking","icon":"🧭","meaning":"Desire for intimacy or emotional closeness","response":"Lower your voice; match proximity with gentle eye contact","category":"intimacy"},
+  {"id":"tilt_smile","cue":"Tilting head sideways with a small smile","icon":"🙂","meaning":"Curious and inviting deeper talk","response":"Lean in, answer warmly, add a small smile","category":"engagement"},
+  {"id":"slow_sigh","cue":"Slow exhale or sigh in your presence","icon":"😮‍💨","meaning":"Emotional release; may seek reassurance","response":"Gentle touch on arm/back and ask softly if she’s okay","category":"support"},
+  {"id":"near_no_eyes","cue":"Avoiding eye contact but staying near you","icon":"🫂","meaning":"Processing feelings; wants quiet support","response":"Stay close without demands; offer tea/water","category":"support"},
+  {"id":"smile_secret","cue":"Smiling after brief eye contact, no words","icon":"🤫","meaning":"Shared secret connection","response":"Return a subtle signal (wink/small nod)","category":"play"},
+  {"id":"lean_in","cue":"Leaning into you or resting head near you","icon":"🤗","meaning":"Seeking safety and comfort","response":"Wrap an arm gently and hold until she moves","category":"comfort"},
+  {"id":"lip_glance","cue":"Glancing at your lips while you talk","icon":"👄","meaning":"Desire for a kiss","response":"Pause, confirm with eyes, then lean in","category":"intimacy"},
+  {"id":"open_posture","cue":"Open posture, relaxed shoulders","icon":"👐","meaning":"Feels safe, confident, receptive","response":"Mirror openness; invite deeper talk/activity","category":"engagement"}
+]

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Parvati Guide — Cues</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body class="font-[Inter] bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+  <header class="sticky top-0 z-20 bg-white/80 dark:bg-slate-900/70 backdrop-blur border-b border-slate-200/70 dark:border-slate-800/80">
+    <nav class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="brand">Non-Verbal Cues</a>
+
+      <div class="hidden md:flex items-center gap-2">
+        <a class="chip" href="index.html">Suprabhatham</a>
+        <a class="chip chip--active" href="cues.html">Cues</a>
+        <a class="chip" href="practice.html">Practice</a>
+        <button id="themeToggle" class="chip">🌗</button>
+      </div>
+
+      <button id="menuToggle" class="md:hidden chip" aria-controls="mobileMenu" aria-expanded="false">☰</button>
+    </nav>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200/70 dark:border-slate-800/80 bg-white/90 dark:bg-slate-900/80 backdrop-blur">
+      <div class="mx-auto max-w-7xl px-4 py-3 flex flex-col gap-2">
+        <a class="chip" href="index.html">Suprabhatham</a>
+        <a class="chip chip--active" href="cues.html">Cues</a>
+        <a class="chip" href="practice.html">Practice</a>
+        <button id="themeToggleMobile" class="chip text-left">🌗 Dark Mode</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-7xl px-4 py-6">
+    <section class="grid gap-3 sm:grid-cols-3 mb-5">
+      <div class="sm:col-span-2">
+        <label class="label">Search</label>
+        <input id="search" type="search" placeholder="Find cue, meaning, or response" class="field">
+      </div>
+      <div>
+        <label class="label">Category</label>
+        <select id="filter" class="field">
+          <option value="">All</option>
+          <option>affection</option><option>connection</option><option>affirmation</option>
+          <option>intimacy</option><option>engagement</option><option>support</option>
+          <option>play</option><option>comfort</option>
+        </select>
+      </div>
+    </section>
+
+    <div class="rounded-xl border border-slate-200/70 dark:border-slate-800/80 bg-white/80 dark:bg-slate-900/60 backdrop-blur">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-slate-100/70 dark:bg-slate-800/60">
+            <tr>
+              <th class="p-3 w-12">Icon</th>
+              <th class="p-3">Non-Verbal Cue</th>
+              <th class="p-3">Likely Meaning</th>
+              <th class="p-3">Healthy Response</th>
+              <th class="p-3 w-28">Tag</th>
+            </tr>
+          </thead>
+          <tbody id="rows" class="divide-y divide-slate-100 dark:divide-slate-800/70"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <p class="mt-3 text-xs text-slate-500 dark:text-slate-400">Update <code>cues.json</code> to change items.</p>
+  </main>
+
+  <script src="assets/theme.js"></script>
+  <script src="assets/nav.js"></script>
+  <script src="assets/cues.js"></script>
+</body>
+</html>
