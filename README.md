@@ -1,7 +1,7 @@
 # -r-P-rvat-Pati-S-tra
 A modern, responsive relationship skills trainer inspired by Parvati’s wisdom. Learn the Suprabhatham principles, master non-verbal cues, and sharpen your response speed through an interactive quick-match quiz. Built with TailwindCSS (latest browser version), light bluish-grey theme.
 
-# Parvati’s Husband’s Guide – Interactive Web App
+# Parvati’s Guide – Interactive Web App
 
 A modern, responsive relationship skills trainer inspired by the ancient wisdom of Goddess Parvati.  
 This guided tutorial site helps users **learn**, **practice**, and **perfect** the art of identifying and responding to non-verbal cues in relationships — with a focus on healthy, independent, and mutual consent–based connection.
