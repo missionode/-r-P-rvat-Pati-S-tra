@@ -1,27 +1,34 @@
+// assets/theme.js
 const PREF_KEY = 'parvati_theme';
 const root = document.documentElement;
+const body = document.body;
 
-function setTheme(mode) {
-  root.classList.toggle('dark', mode === 'dark');
+function applyTheme(mode) {
+  const isDark = mode === 'dark';
+  // Toggle on both <html> and <body> to catch any component-level checks
+  root.classList.toggle('dark', isDark);
+  body.classList.toggle('dark', isDark);
+  // Help browsers render native controls appropriately
+  root.style.colorScheme = isDark ? 'dark' : 'light';
   localStorage.setItem(PREF_KEY, mode);
 }
-function getInitialTheme() {
-  const stored = localStorage.getItem(PREF_KEY);
-  if (stored) return stored;
+
+function initialTheme() {
+  const saved = localStorage.getItem(PREF_KEY);
+  if (saved) return saved;
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 
 // Init
-setTheme(getInitialTheme());
+applyTheme(initialTheme());
 
-// Bind both desktop and mobile toggles (if present)
-function wireToggle(id) {
-  const btn = document.getElementById(id);
-  if (!btn) return;
-  btn.addEventListener('click', () => {
-    const next = root.classList.contains('dark') ? 'light' : 'dark';
-    setTheme(next);
+// Bind desktop + mobile toggles (if present)
+function bind(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.addEventListener('click', () => {
+    applyTheme(root.classList.contains('dark') ? 'light' : 'dark');
   });
 }
-wireToggle('themeToggle');
-wireToggle('themeToggleMobile');
+bind('themeToggle');
+bind('themeToggleMobile');
